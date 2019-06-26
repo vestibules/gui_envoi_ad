@@ -234,7 +234,7 @@ $result = $result -join " de durée totale`nNombre de postes atteints : "
 
 #Affichage log avec le temps écoulé
 Add-Type -AssemblyName PresentationFramework
-[System.Windows.MessageBox]::Show($result , "OK")
+[System.Windows.MessageBox]::Show($result , "Résultat")
 #Réinitialisation des variables
 $variables = @("StartTime","EndTime","TimeTaken","compon","result","log")
     foreach ($var in $variables)
