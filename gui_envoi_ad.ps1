@@ -235,6 +235,6 @@ $result = $result -join " de durée totale`nNombre de postes atteints : "
 #Affichage log avec le temps écoulé
 [System.Windows.MessageBox]::Show($result , "Résultat")
 #Remise à 0 des variables
-$StartTime,$EndTime,$TimeTaken,$numbcomp=$null
+$StartTime,$EndTime,$TimeTaken,$compon=$null
 }})
 [void]$Form.ShowDialog()
