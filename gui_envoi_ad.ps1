@@ -233,8 +233,13 @@ $result = @($duree.tempsecoule,$compon)
 $result = $result -join " de durée totale`nNombre de postes atteints : "
 
 #Affichage log avec le temps écoulé
-[System.Windows.MessageBox]::Show($result , "Résultat")
-#Remise à 0 des variables
-$StartTime,$EndTime,$TimeTaken,$compon=$null
+Add-Type -AssemblyName PresentationFramework
+[System.Windows.MessageBox]::Show($result , "OK")
+#Réinitialisation des variables
+$variables = @("StartTime","EndTime","TimeTaken","compon","result","log")
+    foreach ($var in $variables)
+        {
+        Remove-Variable $var
+        }
 }})
 [void]$Form.ShowDialog()
